@@ -107,7 +107,7 @@ fun TipTimeLayout() {
         Spacer(modifier = Modifier.height(10.dp))
         EditNumberField(
             label = R.string.bill_amount,
-            leadingIcon= R.drawable.money,
+            leadingIcon = R.drawable.money,
             value = amountInput,
             onValueChange = { amountInput = it },
             keyboardOptions = KeyboardOptions.Default.copy(
@@ -121,7 +121,7 @@ fun TipTimeLayout() {
         EditNumberField(
             label = R.string.how_was_the_service,
             value = tipInput,
-            leadingIcon= R.drawable.percent,
+            leadingIcon = R.drawable.percent,
             onValueChange = { tipInput = it },
             keyboardOptions = KeyboardOptions.Default.copy(
                 keyboardType = KeyboardType.Number,
@@ -198,7 +198,7 @@ fun RoundTheTipRow(
 internal fun calculateTip(amount: Double, tipPercent: Double = 15.0, roundUp: Boolean): String {
     var tip = tipPercent / 100 * amount
 
-    if(roundUp){
+    if (roundUp) {
         tip = kotlin.math.ceil(tip)
     }
 
