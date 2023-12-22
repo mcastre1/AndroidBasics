@@ -14,10 +14,11 @@ import androidx.compose.ui.tooling.preview.Preview
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val HS = HeroesScreen()
         super.onCreate(savedInstanceState)
         setContent {
             SuperheroesTheme {
-
+                HS.ListSuperHeroes()
             }
         }
     }
@@ -25,7 +26,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun SuperheroesApp(modifier: Modifier = Modifier){
-
+    val HS = HeroesScreen()
+    HS.ListSuperHeroes()
 }
 
 
@@ -33,5 +35,5 @@ fun SuperheroesApp(modifier: Modifier = Modifier){
 @Preview
 @Composable
 fun SuperheroesAppPreview(){
-
+    SuperheroesApp()
 }
