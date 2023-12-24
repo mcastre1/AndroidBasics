@@ -3,6 +3,7 @@ package com.example.superheroes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxScopeInstance.align
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -41,8 +42,8 @@ class HeroesScreen {
             Row (modifier = Modifier
                 .padding(16.dp)){
                 Column(modifier = Modifier.weight(1f)){
-                    Text(text = stringResource(id = hero.nameRes), style = MaterialTheme.typography.displaySmall)
-                    Text(text = stringResource(id = hero.descriptionRes), style = MaterialTheme.typography.bodyMedium)
+                    Text(text = stringResource(id = hero.nameRes), style = MaterialTheme.typography.displaySmall, modifier = Modifier.fillMaxWidth())
+                    Text(text = stringResource(id = hero.descriptionRes), style = MaterialTheme.typography.bodyMedium, modifier = Modifier.fillMaxWidth())
                 }
                 Spacer(modifier = Modifier.width(16.dp).weight(1f))
                 Image(painter = painterResource(id = hero.imageRes), contentDescription = null,
