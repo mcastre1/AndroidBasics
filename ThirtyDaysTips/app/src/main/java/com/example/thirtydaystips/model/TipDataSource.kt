@@ -5,9 +5,10 @@ import com.example.thirtydaystips.R
 object TipDataSource {
     val tips = listOf(
         Tip(
-            titleRes = R.string.app_name,
-            imageRes = R.drawable.ic_launcher_background,
-            descRes = R.string.app_name
+            dayRes = R.string.day1,
+            titleRes = R.string.tip1,
+            imageRes = R.drawable.day1,
+            descRes = R.string.desc1
         )
     )
 }
