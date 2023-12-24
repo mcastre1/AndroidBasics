@@ -1,3 +1,123 @@
 <resources>
     <string name="app_name">ThirtyDaysTips</string>
+
+    <string name="day1">Day 1</string>
+    <string name="tip1">Try a green smoothie</string>
+    <string name="desc1">If you’re a regular smoothie drinker, throw in a handful of leafy greens to ramp up the nutrition value of your smoothie</string>
+
+    <string name="day2">Day 2</string>
+    <string name="tip2">Stop and breathe</string>
+    <string name="desc2">A quick session of deep breathing can help you feel more relaxed and less stressed. It only takes a moment but can relax your body for hours</string>
+
+    <string name="day3">Day 3</string>
+    <string name="tip3">Eat out less</string>
+    <string name="desc3">When you cook at home, you know what’s in your food. Processed restaurant food has added sodium and fats and more calories. Even if it’s a simple salad, home cooking is best.</string>
+
+    <string name="day4">Day 4</string>
+    <string name="tip4">See your physician for a yearly checkup</string>
+    <string name="desc4">Your physician can keep an eye on what’s going on with your body year after year. Find a doctor and schedule your checkup today.</string>
+
+    <string name="day5">Day 5</string>
+    <string name="tip5">Try a new healthy food</string>
+    <string name="desc5">If you’ve been looking for an excuse to try that kumquat or asparagus, do it! You never know when you’ll find a new favorite healthy snack.</string>
+
+    <string name="day6">Day 6</string>
+    <string name="tip6">Do some yoga</string>
+    <string name="desc6">Yoga is relaxing and good for your physical self. If you’re a beginner, this New York Times guide will help you get started. You’ll be an expert in no time!</string>
+
+    <string name="day7">Day 7</string>
+    <string name="tip7">Drink more water</string>
+    <string name="desc7">Even a glass more a day will help. Increasing water intake may boost your energy levels, help you obtain weight and fitness goals, and improve the quality of your skin.</string>
+
+    <string name="day8">Day 8</string>
+    <string name="tip8">Take a break from social media</string>
+    <string name="desc8">Stay off for a whole day. Studies have shown that social media can lead to a bad mood, low self-esteem, and anxiety. A break can be a refresher.</string>
+
+    <string name="day9">Day 9</string>
+    <string name="tip9">Pamper your feet</string>
+    <string name="desc9">Feet do a lot of work! They need some love. Schedule a massage, get a pedicure, or lather them in lotion and wear soft socks. Buy supportive, comfy shoes.</string>
+
+    <string name="day10">Day 10</string>
+    <string name="tip10">Lower your sugar intake</string>
+    <string name="desc10">Sugary foods age your skin, mess with digestion, and can make you moody and tired. Eat a banana, some watermelon, or some frozen grapes instead.</string>
+
+    <string name="day11">Day 11</string>
+    <string name="tip11">Write down your goals</string>
+    <string name="desc11">Writing down goals makes them more tangible and realistic. You might even create a vision board.</string>
+
+    <string name="day12">Day 12</string>
+    <string name="tip12">Take a walk</string>
+    <string name="desc12">Walking is a great form of exercise and getting outside is good for your mood and health. Do it with a friend or family member for some extra-healthy quality time.</string>
+
+    <string name="day13">Day 13</string>
+    <string name="tip13">Declutter</string>
+    <string name="desc13">You might think you need the things you have, but you really don’t. Reducing clutter lowers stress and makes life simpler. Organize one spot at a time so it’s not overwhelming.</string>
+
+    <string name="day14">Day 14</string>
+    <string name="tip14">Try a new recipe</string>
+    <string name="desc14">You may be in a rut with food or want to add in more fresh ingredients.</string>
+
+    <string name="day15">Day 15</string>
+    <string name="tip15">Lift some weights</string>
+    <string name="desc15">Bring out those dusty dumbbells and lift for 15 minutes. It’s one of the best types of exercise to improve your body’s composition. Even a couple of canned veggies will do!</string>
+
+    <string name="day16">Day 16</string>
+    <string name="tip16">Do something you love</string>
+    <string name="desc16">This can be as small as reading the chapter of a book, practicing a hobby, or eating a food you adore. It’s a great way to enhance your feel-good hormones.</string>
+
+    <string name="day17">Day 17</string>
+    <string name="tip17">Eat one dark leafy green vegetable per day</string>
+    <string name="desc17">Have broccoli at dinner, add spinach to pasta sauce, or kale in your soup. Green veggies help protect us from disease and promote mental wellness.</string>
+
+    <string name="day18">Day 18</string>
+    <string name="tip18">Get your rest</string>
+    <string name="desc18">Americans are notorious for not getting enough rest. Find out your sleep sweet spot (for some seven hours, others 10) and aim for it. Have a bedtime and wake-up routine.</string>
+
+    <string name="day19">Day 19</string>
+    <string name="tip19">Plan an outing</string>
+    <string name="desc19">It could be a visit to a local brewery, time with friends, or a vacation. Making future exciting plans gives you something to anticipate, making dreary days more palatable.</string>
+
+    <string name="day20">Day 20</string>
+    <string name="tip20">Ditch the salt</string>
+    <string name="desc20">Use fresh herbs and pepper to season foods instead of dumping salt in. Salt can contribute to high blood pressure, which can lead to a number of physical issues.</string>
+
+    <string name="day21">Day 21</string>
+    <string name="tip21">Do some cardio</string>
+    <string name="desc21">Get your heart pumping for 30 minutes, three to four times a week. It will help you lose weight, regulate your blood pressure, and lower the risk of disease.</string>
+
+    <string name="day22">Day 22</string>
+    <string name="tip22">Be kind to yourself</string>
+    <string name="desc22">You’re your own worst critic. Negative self-talk can impact you physically and mentally. Be as kind to yourself as you would be to another.</string>
+
+    <string name="day23">Day 23</string>
+    <string name="tip23">Add a superfood to your diet</string>
+    <string name="desc23">Superfoods offer a high level of nutrition and are an immediate upgrade to your diet</string>
+
+    <string name="day24">Day 24</string>
+    <string name="tip24">Stretch at your desk</string>
+    <string name="desc24">Stand up every hour and stretch your body for two minutes. It’s good to get your blood flowing. Stand up straight and check your posture during the stretch.</string>
+
+    <string name="day25">Day 25</string>
+    <string name="tip25">Take the stairs</string>
+    <string name="desc25">Using the stairs instead of elevators is a great way to boost your fitness and doesn’t feel like a huge commitment. Little changes make a great impact!</string>
+
+    <string name="day26">Day 26</string>
+    <string name="tip26">Pump up your breakfast</string>
+    <string name="desc26">Try a bowl of whole-grain oatmeal with berries or a plain yogurt parfait with berries and a little granola. It’s great to start the day with a healthy kick.</string>
+
+    <string name="day27">Day 27</string>
+    <string name="tip27">Take your B vitamins</string>
+    <string name="desc27">B vitamins can help reduce some types of cancer and heart disease. They are found in many foods, including leafy greens, bananas, avocados, and eggs.</string>
+
+    <string name="day28">Day 28</string>
+    <string name="tip28">Share a compliment</string>
+    <string name="desc28">Compliments benefit the giver and the receiver. Making others happy boosts our own happiness, leading to more wellness.</string>
+
+    <string name="day29">Day 29</string>
+    <string name="tip29">Drink green tea</string>
+    <string name="desc29">Green tea improves mental alertness, promotes weight loss, and has been studied for possible impact on reducing heart disease and cancer.</string>
+
+    <string name="day30">Day 30</string>
+    <string name="tip30">Switch up your evening routine</string>
+    <string name="desc30">Wind down before bed by taking a bath or reading a book. Stay off screens. They stimulate your brain and make healthy sleep more difficult to achieve.</string>
 </resources>
