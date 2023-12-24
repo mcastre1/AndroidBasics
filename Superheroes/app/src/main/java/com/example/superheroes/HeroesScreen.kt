@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -23,6 +24,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -37,16 +39,17 @@ class HeroesScreen {
             modifier = modifier
                 .clip(RoundedCornerShape(16.dp))) {
             Row (modifier = Modifier
-                .height(72.dp)
                 .padding(16.dp)){
-                Column(modifier = Modifier){
-                    Text(text = stringResource(id = hero.nameRes))
-                    Text(text = stringResource(id = hero.descriptionRes))
+                Column(modifier = Modifier.weight(1f)){
+                    Text(text = stringResource(id = hero.nameRes), style = MaterialTheme.typography.displaySmall)
+                    Text(text = stringResource(id = hero.descriptionRes), style = MaterialTheme.typography.bodyMedium)
                 }
-                Spacer(modifier = Modifier.width(16.dp))
+                Spacer(modifier = Modifier.width(16.dp).weight(1f))
                 Image(painter = painterResource(id = hero.imageRes), contentDescription = null,
-                    modifier = Modifier.clip(RoundedCornerShape(8.dp))
-                        .weight(1f, fill = false))
+                    modifier = Modifier.size(72.dp)
+                        .weight(1f)
+                        .clip(RoundedCornerShape(8.dp)),
+                    contentScale = ContentScale.Fit)
             }
         }
     }
