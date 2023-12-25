@@ -3,9 +3,12 @@ package com.example.thirtydaystips
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
@@ -22,10 +25,28 @@ import com.example.thirtydaystips.model.TipDataSource
 class TipsScreen {
 
     @Composable
+    fun TipList(
+        modifier: Modifier = Modifier,
+        tips: List<Tip>,
+        contentPadding: PaddingValues = PaddingValues(0.dp)
+    ) {
+        LazyColumn(contentPadding = contentPadding){
+            itemsIndexed(tips){
+                index, tip ->
+                TipListItem(tip = tip, modifier = Modifier
+                    .padding(horizontal = 16.dp, vertical = 8.dp))
+            }
+        }
+
+    }
+
+    @Composable
     fun TipListItem(tip: Tip, modifier: Modifier = Modifier) {
         Card(
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-            modifier = modifier.fillMaxWidth().clickable {  }
+            modifier = modifier
+                .fillMaxWidth()
+                .clickable { }
         ) {
             Column(modifier = Modifier.padding(16.dp)) {
                 Text(text = stringResource(id = tip.dayRes))
@@ -46,6 +67,12 @@ class TipsScreen {
     @Composable
     @Preview
     fun TipListItemPreview() {
-        TipListItem(tip = TipDataSource.tips[0])
+        TipListItem(tip = TipDataSource.tips[10])
+    }
+
+    @Composable
+    @Preview
+    fun TipListPreview() {
+        TipList(tips = TipDataSource.tips)
     }
 }
