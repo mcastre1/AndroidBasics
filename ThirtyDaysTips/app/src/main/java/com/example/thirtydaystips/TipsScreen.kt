@@ -2,8 +2,10 @@ package com.example.thirtydaystips
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -25,8 +27,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.thirtydaystips.model.Tip
 import com.example.thirtydaystips.model.TipDataSource
-
-class TipsScreen {
 
     @Composable
     fun TipList(
@@ -54,7 +54,7 @@ class TipsScreen {
                 .fillMaxWidth()
                 .clickable {expanded = !expanded}
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
+            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 Text(text = stringResource(id = tip.dayRes))
                 Text(text = stringResource(id = tip.titleRes))
                 Image(
@@ -65,6 +65,7 @@ class TipsScreen {
                         .fillMaxWidth()
                         .height(194.dp)
                 )
+                Spacer(modifier=Modifier.height(8.dp))
                 if(expanded){
                     Text(text = stringResource(id = tip.descRes))
                 }
@@ -83,4 +84,3 @@ class TipsScreen {
     fun TipListPreview() {
         TipList(tips = TipDataSource.tips)
     }
-}
