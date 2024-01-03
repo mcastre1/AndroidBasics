@@ -6,11 +6,13 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
-// Game UI State
-private val _uiState = MutableStateFlow(GameUiState())
-val uiState: StateFlow<GameUiState> = _uiState.asStateFlow()
+
 
 class GameViewModel : ViewModel() {
+    // Game UI State
+    private val _uiState = MutableStateFlow(GameUiState())
+    val uiState: StateFlow<GameUiState> = _uiState.asStateFlow()
+
     private lateinit var currentWord: String
     private var usedWords: MutableSet<String> = mutableSetOf()
 
