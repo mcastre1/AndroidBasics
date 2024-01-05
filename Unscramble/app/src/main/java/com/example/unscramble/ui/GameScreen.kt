@@ -61,6 +61,7 @@ fun GameScreen(gameViewModel: GameViewModel = viewModel()) {
     val mediumPadding = dimensionResource(R.dimen.padding_medium)
     val gameUiState by gameViewModel.uiState.collectAsState()
 
+
     Column(
         modifier = Modifier
             .verticalScroll(rememberScrollState())
@@ -76,8 +77,9 @@ fun GameScreen(gameViewModel: GameViewModel = viewModel()) {
 
         GameLayout(currentScrambledWord = gameUiState.currentScrambledWord,
             onUserGuessChanged = {gameViewModel.updateUserGuess(it)},
-            onKeyboardDone = {},
+            onKeyboardDone = {gameViewModel.checkUserGuess()},
             userGuess = gameViewModel.userGuess,
+            isWrongGuess = gameUiState.isGuessedWordWrong,
             modifier = Modifier
                 .fillMaxWidth()
                 .wrapContentHeight()
@@ -93,7 +95,7 @@ fun GameScreen(gameViewModel: GameViewModel = viewModel()) {
 
             Button(
                 modifier = Modifier.fillMaxWidth(),
-                onClick = { }
+                onClick = { gameViewModel.checkUserGuess()}
             ) {
                 Text(
                     text = stringResource(R.string.submit),
@@ -133,6 +135,7 @@ fun GameStatus(score: Int, modifier: Modifier = Modifier) {
 fun GameLayout(currentScrambledWord: String,
                onUserGuessChanged: (String) -> Unit,
                userGuess: String,
+               isWrongGuess: Boolean,
                onKeyboardDone: () -> Unit,
                modifier: Modifier = Modifier) {
     val mediumPadding = dimensionResource(R.dimen.padding_medium)
@@ -176,8 +179,14 @@ fun GameLayout(currentScrambledWord: String,
                     disabledContainerColor = colorScheme.surface,
                 ),
                 onValueChange = onUserGuessChanged,
-                label = { Text(stringResource(R.string.enter_your_word)) },
-                isError = false,
+                label = {
+                    if (isWrongGuess){
+                        Text(stringResource(R.string.wrong_guess))
+                    }else{
+                        Text(stringResource(R.string.enter_your_word))
+                    }
+                         },
+                isError = isWrongGuess,
                 keyboardOptions = KeyboardOptions.Default.copy(
                     imeAction = ImeAction.Done
                 ),
